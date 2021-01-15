@@ -1,0 +1,38 @@
+public class Author {
+    private String name;
+    private int birthyear;
+    private String originCountry;
+
+    public Author(String name,int birthyear,String originCountry){
+        this.name = name;
+        this.birthyear = birthyear;
+        this.originCountry = originCountry;
+    }
+    public String getName(){
+
+        return name;
+    }
+
+    public int getBirthyear(){
+        return birthyear;
+    }
+
+    public String getOriginCountry(){
+        return originCountry;
+    }
+
+    public void setName(String name){
+
+        this.name = name;
+
+    }
+
+    public void setBirthyear(int birthyear){
+
+        this.birthyear = birthyear;
+    }
+
+    public void setOriginCountry(String originCountry){
+        this.originCountry = originCountry;
+    }
+}

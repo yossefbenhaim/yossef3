@@ -1,0 +1,40 @@
+package com.company;
+
+import java.util.HashMap;
+
+public class Restaurant {
+    public String resName;
+    HashMap<Ingredient,Double> ingreidients;
+
+    public Restaurant(String resName){
+        this.resName = resName;
+        ingreidients = new HashMap<Ingredient,Double>();
+    }
+    public void addIngredient(Ingredient i, double amount){
+       ingreidients.put(i,amount);
+
+        }
+       public Double totalCost() {
+        final double [] x ;
+       ingreidients.forEach((Ingredient i,Double amount)-> x [0] += i.Salary);{
+
+           x =  (amount * i.getIngPrice());
+
+           });
+          return  x;
+           }
+           public boolean isAvailadle(Dish dish){
+
+        ingreidients.forEach((Ingredient i,Double a)->{
+            if( dish > a){
+                return true;
+            }
+               });
+           }
+
+       }
+
+
+
+
+

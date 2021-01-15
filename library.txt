@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Library {
+    ArrayList <Book> books ;
+    ArrayList<Rental> rentals;
+
+    public Library(){
+        books = new ArrayList<Book>();
+        rentals = new ArrayList<Rental>();
+    }
+   public  Author mostPopular(){
+       ArrayList<Author> authors = new ArrayList<Author>();
+       ArrayList<Integer> apps = new ArrayList<Integer>();
+
+       HashMap<Author,Integer> map = new HashMap<>();
+
+       for( Book b : books){
+           if(authors.indexOf(b.getAuthor()) == -1){
+               authors.add(b.getAuthor());
+               apps.add(1);
+           }else{
+               apps.set(authors.indexOf(b.getAuthor()),apps.get(authors.indexOf(b.getAuthor()) + 1));
+           }
+       }
+       return (Author)(map.values().stream().sorted().toArray()[map.values().stream().sorted().toString().length() -1]);
+   }
+}
